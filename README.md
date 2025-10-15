@@ -92,15 +92,10 @@ Fire up DimeDrop in ~10 minutes. No corporate handbook needed.
 
 ## 📊 How to Use It
 
-- **Search Cards**: Type "Wembanyama Prizm" in the Gradio search bar to see its eBay price range ($120-$150, based on recent "sold" averages).
-- **Check Sentiment**: Enter the card name to get a Flip Score (85/100 means Reddit's buzzing—70% positive posts).
-- **Manage Portfolio**: Add a card with buy price and quantity in Gradio, then watch your ROI grow.
-- **Set Alerts**: Input a target price (e.g., $150 for Wemby), and get a heads-up when eBay data hits it on refresh.
-
 ## 📸 Screenshots
 
 Check out DimeDrop in action—upload your app screenshots to `assets/` for proof:
-
+![DimeDrop Gradio Interface](assets/Screenshot%20from%202025-10-15%2017-43-20.png)
 ![DimeDrop Gradio Interface](assets/Screenshot%20from%202025-10-15%2017-43-20.png)
 
 ## 🧪 Testing
