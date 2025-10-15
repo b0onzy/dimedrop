@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "dimedrop-backend"
+version = "0.2.0"
+description = "FastAPI backend for DimeDrop card flipping"
+authors = ["b0onzy <your.email@example.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.115.0"
+uvicorn = "^0.30.0"
+ebaysdk = "^2.2.0"
+praw = "^7.7.0"
+scikit-learn = "^1.5.0"
+transformers = "^4.45.0"
+supabase = "^2.7.0"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.0"
+pytest-asyncio = "^0.24.0"
+black = "^24.8.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+# Talon: Dictate 'add pytest dependency' to extend.
