@@ -101,7 +101,7 @@ Get DimeDrop up in ~10 minutes. No suit-and-tie required.
 
 Here's DimeDrop in action—upload your app screenshots to `assets/` for visual proof:
 
-![DimeDrop Gradio Interface](assets/screenshot.png)
+![DimeDrop Gradio Interface](assets/Screenshot%20from%202025-10-15%2013-48-06.png)
 
 ## 🧪 Testing
 
