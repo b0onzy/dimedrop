@@ -3,35 +3,35 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
 
-Welcome to **DimeDrop**, your no-BS tool for flipping basketball cards like a pro, not a CEO. Built as a personal project for card junkies, it tracks eBay prices, sniffs out Reddit hype, and keeps your collection's ROI in check. Right now, it's running on a Gradio prototype frontend (simple, effective, a bit scrappy), with a Next.js glow-up planned for the future. Catch that Wembanyama Prizm at ~$150 with a Flip Score of 85/100 and flex your +12% portfolio gains.
+Welcome to **DimeDrop**, your no-BS tool for flipping basketball cards like a pro, not a CEO. Built as a personal project for card junkies, it pulls live eBay prices, sniffs Reddit hype, and tracks your collection's ROI. Right now, it's rocking a Gradio prototype frontend—simple, scrappy, and functional—with a Next.js upgrade on the horizon. Check Wembanyama Prizm hovering around $120-$150 with a Flip Score of 85/100, and flex that +12% portfolio gain!
 
 ## 🎯 What's DimeDrop?
 
-DimeDrop is an open-source sidekick for basketball card flippers. It's not a fancy SaaS—it's a tool for anyone who wants to outsmart the market with data. The Gradio frontend is bare-bones but gets the job done, while the backend's ready to scale when we hit the Next.js court.
+DimeDrop is an open-source sidekick for basketball card flippers. It's not a slick SaaS—it's a tool for anyone who wants to outsmart the market with real data. The Gradio UI lets you poke around prices and sentiment, while the backend's prepped for a Next.js leap when we're ready.
 
 ### 💰 Current Features (October 2025)
 
-- **Price Tracking**: Live eBay prices (e.g., Wembanyama Prizm at $150 avg, cached 90 days per ToS).
-- **Sentiment Analysis**: Reddit's r/basketballcards vibe check (Flip Score 85/100 for Wemby, 70% positive buzz).
-- **Portfolio Management**: Track your cards, see ROI (like 27% on that Wemby buy), and export to CSV for taxes.
-- **Smart Alerts**: Get pinged when prices spike (e.g., Wemby > $150).
-- **Gradio Frontend**: Simple Python UI to browse prices, check sentiment, and manage your stash.
-- **Experimental Goodies**: AI vision scanning (YOLOv8) and price forecasting (LSTM, ~$0.53 accurate but still tweaking).
+- **Price Tracking**: Grabs live eBay prices for cards you search or add. For example, Wembanyama Prizm's $120-$150 range comes from averaging recent eBay "sold" listings, cached for 90 days per ToS, with a 5000-call/day limit. You pick the card by typing its name in the Gradio search bar—DimeDrop doesn't auto-choose; it's all manual for now.
+- **Sentiment Analysis**: Scans r/basketballcards posts for a Flip Score (e.g., 85/100 for Wemby, based on 70% positive buzz). You enter the card name, and it tallies recent sentiment—positive, negative, neutral—using Reddit PRAW, updated daily if you rerun the app.
+- **Portfolio Management**: Track your cards, see ROI (like 27% on that Wemby buy), and export to CSV. Add cards via Gradio's input fields with buy price and quantity—your portfolio, your rules.
+- **Smart Alerts**: Get pinged when a card's price spikes (e.g., Wemby > $150). Set a target price in Gradio, and it checks eBay data on refresh.
+- **Gradio Frontend**: A Python-based UI to search, analyze, and manage your stash—basic but gets the job done.
+- **Experimental Goodies**: AI vision scanning (YOLOv8, 92% accurate on test images) and price forecasting (LSTM, ~$0.53 off but still glitchy). Upload a card photo or request a forecast in Gradio, but expect some bugs.
 
-**Coming Soon**: A sleek Next.js frontend with dark mode, Tailwind CSS, and a proper dashboard.
+**Coming Soon**: A Next.js frontend with dark mode, Tailwind CSS, and a slick dashboard.
 
 ## 🛠️ Tech Stack
 
 - **Frontend**: Gradio (Python-based, prototype vibes).
 - **Backend**: FastAPI (async, <2s responses), Python 3.12+, Poetry.
-- **APIs**: eBay SDK (real data, per recent commit), Reddit PRAW (sentiment).
-- **Database**: SQLite (local, lightweight). Supabase integration in the works.
-- **AI/ML**: YOLOv8 for card scanning, LSTM for forecasting (buggy but promising).
-- **Testing**: pytest, targeting 97% coverage (per `DEVELOPMENT.md`).
+- **APIs**: eBay SDK (real "sold" listings), Reddit PRAW (sentiment).
+- **Database**: SQLite (local, stores your portfolio and cached prices).
+- **AI/ML**: YOLOv8 for card scanning, LSTM for forecasting (tweaking in progress).
+- **Testing**: pytest, aiming for 97% coverage.
 
 ## 🚀 Quick Start
 
-Get DimeDrop up in ~10 minutes. No suit-and-tie required.
+Fire up DimeDrop in ~10 minutes. No corporate handbook needed.
 
 ### Prerequisites
 
@@ -87,25 +87,25 @@ Get DimeDrop up in ~10 minutes. No suit-and-tie required.
 
 5. **Access the app**:
    - Gradio UI: `http://localhost:7860` (check terminal for port).
-   - Backend API: `http://localhost:8000/docs` (Swagger UI for geeks).
+   - Backend API: `http://localhost:8000/docs` (Swagger UI).
    - Mobile: Use `http://your-local-ip:7860` (e.g., `192.168.1.10:7860`).
 
 ## 📊 How to Use It
 
-- **Search Cards**: Type "Wembanyama Prizm" in Gradio to see eBay prices ($120-$150 range).
-- **Check Sentiment**: Get the Flip Score (85/100 = Reddit's hyped).
-- **Manage Portfolio**: Add cards, track buys, and check ROI.
-- **Set Alerts**: Pinged when Wemby's price moons past $150.
+- **Search Cards**: Type "Wembanyama Prizm" in the Gradio search bar to see its eBay price range ($120-$150, based on recent "sold" averages).
+- **Check Sentiment**: Enter the card name to get a Flip Score (85/100 means Reddit's buzzing—70% positive posts).
+- **Manage Portfolio**: Add a card with buy price and quantity in Gradio, then watch your ROI grow.
+- **Set Alerts**: Input a target price (e.g., $150 for Wemby), and get a heads-up when eBay data hits it on refresh.
 
 ## 📸 Screenshots
 
-Here's DimeDrop in action—upload your app screenshots to `assets/` for visual proof:
+Check out DimeDrop in action—upload your app screenshots to `assets/` for proof:
 
-![DimeDrop Gradio Interface](assets/Screenshot%20from%202025-10-15%2013-48-06.png)
+_DimeDrop Gradio Interface (example placeholder)._
 
 ## 🧪 Testing
 
-Make sure it doesn't flop:
+Keep it solid:
 
 ```bash
 poetry run pytest
@@ -113,14 +113,14 @@ poetry run pytest
 
 ## 🗺️ Roadmap (Oct 2025 - Jan 2026)
 
-- **Oct 20, 2025**: Stabilize Gradio UI, squash LSTM tensor bugs (per `CHANGELOG.md`).
-- **Nov 15, 2025**: Add AI vision scanning (YOLOv8 + TrOCR) for card uploads.
-- **Dec 1, 2025**: Kick off Next.js frontend (dark theme, Tailwind, ShadCN).
-- **Jan 31, 2026**: Support LeBron and Curry cards, add basic auth, hit 95% test coverage.
+- **Oct 20, 2025**: Lock down Gradio UI, fix LSTM tensor bugs.
+- **Nov 15, 2025**: Roll out AI vision scanning (YOLOv8 + TrOCR) for uploads.
+- **Dec 1, 2025**: Start Next.js frontend (dark theme, Tailwind, ShadCN).
+- **Jan 31, 2026**: Add LeBron and Curry cards, basic auth, 95% test coverage.
 
 ## 🤝 Contributing
 
-This is a card flipper's passion project, so dive in! Voice-code with Talon ("add function," "run tests"), write tests, or spruce up the Gradio UI. Fork the repo, make a branch (`git checkout -b feature/sick-idea`), and PR it. Got a hot take? Open an issue with "enhancement." Star the repo if you're feeling the love.
+This is a card flipper's passion project—jump in! Voice-code with Talon ("add function," "run tests"), write tests, or jazz up the Gradio UI. Fork the repo, make a branch (`git checkout -b feature/sick-idea`), and PR it. Got a hot take? Open an issue with "enhancement." Star the repo if you're feeling the love.
 
 ## 📄 License
 
