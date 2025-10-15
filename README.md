@@ -101,7 +101,7 @@ Fire up DimeDrop in ~10 minutes. No corporate handbook needed.
 
 Check out DimeDrop in action—upload your app screenshots to `assets/` for proof:
 
-_DimeDrop Gradio Interface (example placeholder)._
+![DimeDrop Gradio Interface](assets/Screenshot%20from%202025-10-15%2017-43-20.png)
 
 ## 🧪 Testing
 
