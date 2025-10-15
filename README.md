@@ -97,6 +97,12 @@ Get DimeDrop up in ~10 minutes. No suit-and-tie required.
 - **Manage Portfolio**: Add cards, track buys, and check ROI.
 - **Set Alerts**: Pinged when Wemby's price moons past $150.
 
+## 📸 Screenshots
+
+Here's DimeDrop in action—upload your app screenshots to `assets/` for visual proof:
+
+![DimeDrop Gradio Interface](assets/screenshot.png)
+
 ## 🧪 Testing
 
 Make sure it doesn't flop:
